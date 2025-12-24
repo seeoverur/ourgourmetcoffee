@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charleston Coffee Brands - Local Roasters & Coffee Makers | Out Gourmet Coffee</title>
+    <meta name="description" content="Discover the best local coffee brands and roasters in Charleston, SC. From artisan roasters to specialty coffee makers, explore Charleston's finest coffee brands.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            color: #2c2416;
+            background-color: #faf8f5;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: #4a3728;
+        }
+        
+        .navbar {
+            background-color: #6b4423;
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #f4e8d8 !important;
+            letter-spacing: 1px;
+        }
+        
+        .navbar-nav .nav-link {
+            color: #f4e8d8 !important;
+            font-weight: 400;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #d4a574 !important;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, #8b6f47 0%, #6b4423 100%);
+            color: #fff;
+            padding: 80px 0 60px;
+            margin-bottom: 3rem;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            color: #f4e8d8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .intro-section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+        }
+        
+        .intro-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #6b4423;
+        }
+        
+        .intro-section p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #4a3728;
+            margin-bottom: 1.5rem;
+        }
+        
+        .brand-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #d4a574;
+        }
+        
+        .brand-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+        }
+        
+        .brand-card h3 {
+            font-size: 1.9rem;
+            margin-bottom: 1rem;
+            color: #6b4423;
+        }
+        
+        .brand-card h4 {
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: #8b6f47;
+        }
+        
+        .brand-card p {
+            color: #4a3728;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .brand-card ul {
+            margin-bottom: 1rem;
+        }
+        
+        .brand-card li {
+            color: #4a3728;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+        
+        .location-badge {
+            display: inline-block;
+            background-color: #f4e8d8;
+            color: #6b4423;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .specialty-tag {
+            display: inline-block;
+            background-color: #8b6f47;
+            color: #fff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .summary-box {
+            background: linear-gradient(135deg, #f4e8d8 0%, #e8d9c3 100%);
+            border-radius: 10px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .summary-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #6b4423;
+        }
+        
+        .summary-box p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #4a3728;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: #4a3728;
+            color: #f4e8d8;
+            padding: 2rem 0;
+            margin-top: 5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .intro-section, .brand-card {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Out Gourmet Coffee</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="homemade-latte.html">Homemade Latte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="coffee-shops-downtown-charleston.html">Downtown Coffee Shops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="coffee-brands.html">Coffee Brands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="best-brew-adds.html">Best Brew Adds</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container text-center">
+            <h1>Charleston Coffee Brands & Local Roasters</h1>
+            <p>Discover the exceptional coffee brands and artisan roasters that make Charleston's coffee scene truly special</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="intro-section">
+            <h2>Charleston's Thriving Coffee Culture</h2>
+            <p>Charleston, South Carolina has emerged as a premier destination for specialty coffee, home to some of the finest local roasters and coffee brands in the Southeast. The Holy City's coffee scene reflects the same attention to detail and quality that defines its celebrated culinary landscape.</p>
+            
+            <p>From small-batch artisan roasters crafting single-origin masterpieces to established brands delivering consistent excellence, Charleston's local coffee makers are committed to sourcing premium beans and roasting them to perfection. These local brands not only serve the Lowcountry but have gained recognition throughout the region and beyond.</p>
+            
+            <p>Whether you're seeking a bold dark roast to start your morning or a delicate light roast that showcases unique flavor notes, Charleston's local coffee brands offer exceptional quality and distinctive character that you won't find anywhere else.</p>
+        </div>
+
+        <div class="brand-card">
+            <h3>Kudu Coffee & Craft Beer</h3>
+            <span class="location-badge">📍 Multiple Charleston Locations</span>
+            <p>Kudu has become a Charleston institution, combining exceptional coffee with a unique craft beer selection. Their commitment to quality coffee roasting and community gathering spaces has made them a favorite among locals and visitors alike.</p>
+            
+            <h4>What Makes Kudu Special</h4>
+            <p>Kudu roasts their own coffee beans in-house, ensuring freshness and quality control from bean to cup. Their roasting philosophy emphasizes bringing out the natural characteristics of each coffee origin while maintaining consistency across their locations.</p>
+            
+            <div class="mt-3">
+                <span class="specialty-tag">In-House Roasting</span>
+                <span class="specialty-tag">Specialty Coffee</span>
+                <span class="specialty-tag">Community Hub</span>
+            </div>
+            
+            <h4>Signature Offerings</h4>
+            <p>Their rotating selection of single-origin coffees showcases beans from around the world, while their house blends provide reliable favorites for daily drinking. Kudu's espresso program is particularly notable, with skilled baristas crafting everything from classic cappuccinos to creative seasonal drinks.</p>
+        </div>
+
+        <div class="brand-card">
+            <h3>Charleston Coffee Roasters</h3>
+            <span class="location-badge">📍 Downtown Charleston</span>
+            <p>One of Charleston's original specialty coffee roasters, Charleston Coffee Roasters has been perfecting their craft for years. Their dedication to sustainable sourcing and precise roasting techniques has earned them a loyal following throughout the Lowcountry.</p>
+            
+            <h4>Roasting Excellence</h4>
+            <p>Charleston Coffee Roasters focuses on small-batch roasting, allowing them to maintain exceptional quality and highlight the unique characteristics of each coffee variety. Their roasting profiles range from bright, fruity light roasts to rich, chocolatey dark roasts.</p>
+            
+            <div class="mt-3">
+                <span class="specialty-tag">Small-Batch Roasting</span>
+                <span class="specialty-tag">Sustainable Sourcing</span>
+                <span class="specialty-tag">Local Institution</span>
+            </div>
+            
+            <h4>Popular Blends</h4>
+            <p>Their signature Charleston Blend offers a balanced, smooth profile perfect for everyday drinking, while their seasonal single-origin offerings provide coffee enthusiasts with opportunities to explore exceptional beans from specific regions and farms around the globe.</p>
+        </div>
+
+        <div class="brand-card">
+            <h3>Black Tap Coffee</h3>
+            <span class="location-badge">📍 North Charleston</span>
+            <p>Black Tap Coffee represents the newer generation of Charleston coffee roasters, bringing fresh perspectives and innovative approaches to the local coffee scene. Their modern roasting facility and tasting room have quickly made them a destination for serious coffee lovers.</p>
+            
+            <h4>Modern Roasting Approach</h4>
+            <p>Black Tap emphasizes transparency in their sourcing, often featuring detailed information about the farms and cooperatives where their beans originate. Their roasting style tends toward lighter profiles that showcase the inherent flavors of high-quality, specialty-grade beans.</p>
+            
+            <div class="mt-3">
+                <span class="specialty-tag">Specialty Grade</span>
+                <span class="specialty-tag">Direct Trade</span>
+                <span class="specialty-tag">Modern Roasting</span>
+            </div>
+            
+            <h4>Coffee Education</h4>
+            <p>Beyond selling exceptional coffee, Black Tap is committed to educating customers about coffee origins, processing methods, and brewing techniques. Their tasting room offers cupping sessions and brewing workshops for those looking to deepen their coffee knowledge.</p>
+        </div>
+
+        <div class="brand-card">
+            <h3>Second State Coffee</h3>
+            <span class="location-badge">📍 Mount Pleasant</span>
+            <p>Second State Coffee has established itself as a Mount Pleasant favorite, offering locally roasted coffee with a focus on consistency and approachability. Their welcoming atmosphere and quality coffee have made them a community gathering place.</p>
+            
+            <h4>Community-Focused Roasting</h4>
+            <p>Second State takes pride in creating coffee that appeals to both casual drinkers and coffee connoisseurs. Their roasting approach balances accessibility with quality, producing coffees that are flavorful without being intimidating to those new to specialty coffee.</p>
+            
+            <div class="mt-3">
+                <span class="specialty-tag">Local Favorite</span>
+                <span class="specialty-tag">Balanced Profiles</span>
+                <span class="specialty-tag">Community Driven</span>
+            </div>
+            
+            <h4>Reliable Quality</h4>
+            <p>Their core lineup of coffees provides consistent quality, making Second State a reliable choice for daily coffee drinkers. They also rotate seasonal offerings that introduce customers to different coffee origins and flavor profiles throughout the year.</p>
+        </div>
+
+        <div class="brand-card">
+            <h3>Collective Coffee Roasters</h3>
+            <span class="location-badge">📍 Charleston Area</span>
+            <p>Collective Coffee Roasters brings an artisan approach to coffee roasting, focusing on exceptional beans and careful roasting that highlights each coffee's unique character. Their wholesale presence throughout Charleston means you'll find their coffee in many local cafes and restaurants.</p>
+            
+            <h4>Artisan Roasting Philosophy</h4>
+            <p>Collective's roasters work closely with coffee importers to source exceptional green beans, often from small farms and cooperatives. Their roasting profiles are developed to complement each coffee's natural attributes, whether that's bright acidity, fruity notes, or chocolate undertones.</p>
+            
+            <div class="mt-3">
+                <span class="specialty-tag">Artisan Roasting</span>
+                <span class="specialty-tag">Wholesale Partners</span>
+                <span class="specialty-tag">Quality Focused</span>
+            </div>
+            
+            <h4>Wide Distribution</h4>
+            <p>While they may not have their own retail locations, Collective's coffee is served in some of Charleston's best cafes and restaurants. This partnership approach allows them to focus on roasting excellence while supporting the broader Charleston coffee community.</p>
+        </div>
+
+        <div class="summary-box">
+            <h2>Why Choose Charleston Coffee Brands</h2>
+            <p>Supporting local Charleston coffee roasters means more than just enjoying exceptional coffee. You're investing in businesses that contribute to the local economy, create jobs, and help define Charleston's unique character and culture.</p>
+            
+            <p>These local roasters typically source beans more responsibly, roast in smaller batches for better quality control, and deliver fresher coffee than mass-market brands. Many Charleston roasters can trace their beans directly to specific farms, ensuring fair compensation for farmers and transparency in the supply chain.</p>
+            
+            <p>The freshness factor alone makes local roasters stand out. When you buy from a Charleston roaster, you're often getting coffee that was roasted within days or weeks, not months ago. This freshness translates directly to better flavor in your cup, with more vibrant aromatics and complex taste profiles.</p>
+            
+            <p>Beyond the quality and freshness, Charleston's coffee brands each bring their own personality and approach to roasting. Whether you prefer the community vibe at Kudu, the educational focus at Black Tap, or the artisan approach at Collective, you'll find a local roaster that matches your coffee philosophy and taste preferences.</p>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Out Gourmet Coffee - Charleston, SC | Your Coffee Enthusiast Hub</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
